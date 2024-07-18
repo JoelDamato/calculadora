@@ -1,13 +1,13 @@
 body {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #333; /* Cambiar el color de fondo del cuerpo a oscuro */
+    color: #fff; /* Cambiar el color del texto a blanco */
     font-family: Arial, sans-serif;
 }
 
 .calculator {
     max-width: 300px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #444; /* Cambiar el color de fondo de la calculadora a un tono más oscuro */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -15,8 +15,8 @@ body {
 }
 
 .screen {
-    background-color: #eee;
-    color: #333;
+    background-color: #555; /* Cambiar el color de fondo de la pantalla */
+    color: #fff;
     font-size: 2em;
     text-align: right;
     padding: 10px;
@@ -31,8 +31,8 @@ body {
 }
 
 button {
-    background-color: #ccc;
-    color: #333;
+    background-color: #666; /* Cambiar el color de fondo de los botones a un tono gris oscuro */
+    color: #fff;
     border: none;
     padding: 15px;
     font-size: 1.5em;
@@ -42,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color: #bbb; /* Cambiar a un gris más claro al pasar el mouse */
+    background-color: #888; /* Cambiar el color de fondo de los botones al pasar el mouse */
 }
 
 .operator, .equal {
@@ -58,7 +58,15 @@ button:hover {
 }
 
 .number:hover {
-    background-color: #666; /* Gris un poco más claro al pasar el mouse */
+    background-color: #999; /* Gris un poco más claro al pasar el mouse */
+}
+
+.clear {
+    background-color: #a22; /* Rojo oscuro para el botón de limpiar (C) */
+}
+
+.clear:hover {
+    background-color: #c44; /* Rojo más claro al pasar el mouse */
 }
 
 .footer {
@@ -66,5 +74,5 @@ button:hover {
     bottom: 10px;
     right: 10px;
     font-size: 0.8em;
-    color: #333;
+    color: #ccc; /* Color del texto del pie de página */
 }
