@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.querySelector('.decimal').addEventListener('click', function () {
+        if (!currentNumber.includes('.')) {
+            currentNumber += '.';
+            updateScreen('.');
+        }
+    });
+
     document.querySelectorAll('.operator').forEach(button => {
         button.addEventListener('click', function () {
             if (operator !== null && currentNumber !== '') {
@@ -50,9 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('equal').addEventListener('click', function () {
         if (operator && currentNumber !== '') {
-            const result = calculate(firstOperand, parseFloat(currentNumber), operator);
+            let result = calculate(firstOperand, parseFloat(currentNumber), operator);
+            result = parseFloat(result.toFixed(12)); // Limitar a 12 decimales
             screen.innerText = result;
-            currentNumber = result;
+            currentNumber = result.toString();
             operator = null;
             firstOperand = null;
             shouldResetScreen = true;
