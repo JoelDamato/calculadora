@@ -10,30 +10,49 @@
     <div class="calculator">
         <div class="screen" id="screen">0</div>
         <div class="keys">
-            <button class="operator" value="+">+</button>
-            <button class="operator" value="-">-</button>
-            <button class="operator" value="*">&times;</button>
-            <button class="operator" value="/">÷</button>
-            <button class="operator" value="%">%</button> <!-- Botón de porcentaje -->
-            <button class="number" value="7">7</button>
-            <button class="number" value="8">8</button>
-            <button class="number" value="9">9</button>
-            <button class="number" value="3">3</button>
-            <button class="number" value="4">4</button>
-            <button class="number" value="5">5</button>
-            <button class="number" value="6">6</button>
-            <button class="decimal" value=".">.</button> 
-            <button class="number" value="0">0</button>
-            <button class="number" value="1">1</button>
-            <button class="number" value="2">2</button>
-            
-            
-            
-            <button class="equal" id="equal">=</button>
-            <button class="clear" id="clear">C</button>
+            <div class="row">
+                <button class="clear" id="clear">C</button>
+                <button class="clear" id="delete">⌫</button>
+                <button class="history-btn" id="open-history">H</button>
+                <button class="operator" value="*">&times;</button>
+            </div>
+            <div class="row">
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" value="/">÷</button>
+            </div>
+            <div class="row">
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" value="-">-</button>
+            </div>
+            <div class="row">
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" value="+">+</button>
+            </div>
+            <div class="row">
+                <button class="number" value="0" class="zero-btn">0</button>
+                <button class="decimal" value=".">.</button>
+                <button class="operator" value="%">%</button>
+                <button class="equal" id="equal">=</button>
+            </div>
         </div>
-        <div class="footer">by Pro Link</div> <!-- Nuevo elemento -->
     </div>
+    <div class="footer">by Pro Link</div>
+
+    <!-- Modal de historial -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Historial de Cálculos</h2>
+            <div id="history" class="history"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
